@@ -1,0 +1,1145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;1,400;1,700&family=Instrument+Sans:ital,wght@0,400;1,700&family=Poppins:wght@200;400&family=Russo+One&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: none;
+   outline: none;
+   scroll-behavior: smooth;
+   font-family: 'poppins', sans-serif;
+   text-decoration: none;
+}
+
+:root{
+    --bg-color:#081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+}
+
+
+
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/*======>Desing A header<=======================================================================*/
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: sticky;
+    top:0;
+    left: 0;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+
+/* sticky header scrroll */
+.header.sticky{
+    background: var(--second-bg-color);
+}
+
+.header #menu-icon{
+    display: none;
+}
+
+
+.header .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.header .navbar{
+    margin-right: 80px;
+    position: relative;
+}
+
+.header .navbar ul li{
+    display:inline-block;
+    padding-left: 30px;
+    padding-top: 25px;
+}
+
+.header .navbar ul li a{
+    color: #fff;
+    transition: 0.3s;
+}
+
+.header .navbar a:hover,
+.header .navbar a.active{
+    color: var(--main-color);
+}
+
+
+
+/* ========> Design A Home <==========================================================================*/
+
+.home{
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.home .pot-img{
+    width: 600px;
+    height: 400px;
+    margin-top: 150px;
+    margin-right: 100px;
+}
+
+.home .pot-img img{
+    width: 100%;
+    height:100% ;
+}
+
+.home-conten {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.home-conten .top-text{
+    
+}
+
+.home-conten .top-text h2{
+    font-size: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.home-conten .low-text{
+    position: relative;
+}
+
+.home-conten .low-text .front{
+    font-size: 28px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .1px var(--main-color);
+    background-image: linear-gradient(var(--main-color),var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    animation: homeBgtext 6s linear infinite;
+    position: relative;
+    z-index: 1;
+}
+
+.home-conten .low-text .front::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    background: var(--bg-color);
+    z-index: -1;
+    animation: homecursortext 6s linear infinite;
+}
+
+.home-conten .p-text{
+    width: 60%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.home-conten .button{
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+}
+
+.home-conten .button .btn{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background:none;
+    text-align: center;
+    border: 2px solid var(--main-color);
+    width:120px ;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    background: var(--main-color);
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.home-conten .button .btn:nth-child(2){
+    margin-left: 30px;
+    background: none;
+    color: var(--main-color);
+}
+
+.home-conten .button .btn::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.home-conten .button .btn:hover::before{
+    width: 100%;
+}
+
+.home-conten .button .btn:hover{
+    color: var(--main-color);
+}
+
+.home-conten .button .btn:nth-child(2)::before{
+    background: var(--main-color);
+}
+
+.home-conten .button .btn:nth-child(2):hover{
+    color: var(--bg-color);
+}
+
+
+.home-conten .icon{
+    margin-top: 40px;
+    position: relative;
+    height: 70px;
+    display: flex;
+}
+
+.home-conten .icon a{
+    border-radius: 50%;
+    text-align: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-color);
+    overflow: hidden;
+    outline: none;
+    transition: 0.5s;
+    background: var(--main-color);
+}
+
+.home-conten .icon a:nth-child(2){
+    margin-left: 10px;
+}
+.home-conten .icon a:nth-child(3){
+    margin-left: 10px;
+}
+
+.home-conten .icon a i{
+    font-size: 20px;
+    color: var(--bg-color);
+    transition: 0.8s;
+}
+
+
+.home-conten .icon a i:hover{
+    transform:rotate(360deg)
+}
+
+
+/*===========> Desing A About Setion <==============================================================*/
+
+.about {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    background: var(--second-bg-color);
+}
+
+.about .about-conten h2{
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+}
+
+.about .about-conten span{
+    color: var(--main-color);
+}
+
+.about .about-conten .img-pot{
+    position: relative;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    display: block;
+}
+
+.about .about-conten .img-pot img{
+    width: 90%;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+}
+
+
+
+.about .about-conten .img-pot .circel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 55%;
+    left: 50%;
+    border-radius: 50%;
+    border-top:2px solid var(--second-bg-color) ;
+    border-bottom:2px solid var(--second-bg-color) ;
+    border-left: 2px solid var(--text-color);
+    border-right:2px solid var(--text-color) ;
+    transform: translate(-55%, -60%) rotate(0);
+    animation: aboutspenner 8s linear infinite;
+}
+
+.active {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.about .about-conten .text h3{
+ text-align: center;
+ padding-top: 40px;
+ font-size: 25px;
+ position: relative;
+}
+
+.about .about-conten .p-textbox{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.about .about-conten .p-textbox p{
+    text-align: center;
+    position: relative;
+}
+
+.about .about-conten .button-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.about .about-conten .button-box .btn{
+    padding: 10px;
+    border: none;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    text-align: center;
+    border: 2px solid var(--main-color);
+    width: 120px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    background: var(--main-color);
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+
+.about .about-conten .button-box .btn::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.about-conten .button-box .btn:hover::before {
+    width: 100%;
+}
+
+.about .about-conten .button-box .btn:hover {
+    color: var(--main-color);
+}
+
+/* =========> Desing A Education section <========================================================*/
+
+.education{
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.education h2 {
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.education span {
+    color: var(--main-color);
+}
+
+.education .contentall-box .title{
+ padding-left: 20px;
+}
+
+.education-conten{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0px 50px;
+    gap: 30px;
+    position: relative;
+}
+
+
+.border-conten{
+    border-left: 2px solid var(--main-color);
+   
+}
+
+
+
+.border-box::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--main-color);
+  border-radius: 50%;
+  margin-left:-11px;
+  margin-top: 10px;
+}
+
+.conten {
+    border: 2px solid var(--main-color);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.conten::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.conten:hover::before{
+    width: 100%;
+}
+
+.conten .icon-box{
+    display: flex;
+    gap: 5px;
+    color: var(--main-color);
+}
+
+.conten .icon-box i{
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+
+/*===================> Skllish Section Design <============================================== */
+
+.skills{
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: var(--second-bg-color);
+}
+
+.skills-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.skills-container{
+ display: flex;
+ gap: 30px;
+ margin-top: 50px;
+}
+
+.skills-content .myskills{
+    font-size: 60px;
+    position: relative;
+}
+
+.skills-content .myskills span{
+    color: var(--main-color);
+}
+
+.code-skills{
+    position: relative;
+}
+
+.professional-skills{
+    position: relative;
+}
+
+/*========>htmlskills Design<============*/
+
+
+
+.htmlskills{
+    border: 2px solid var(--main-color);
+    padding: 10px;
+    width: 350px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    position: relative;
+}
+
+.htmlskills::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:var(--bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.htmlskills:hover:before{
+    width: 100%;
+}
+
+.htmlskills .html{
+    margin-top: 20px;
+}
+
+.htmlskills .html:nth-child(1) .bar .progress{
+  width: 90%;
+}
+
+.htmlskills .html:nth-child(2) .bar .progress{
+  width: 80%;
+}
+
+.htmlskills .html:nth-child(3) .bar .progress{
+  width: 60%;
+}
+
+.htmlskills .html:nth-child(4) .bar .progress{
+  width: 20%;
+}
+
+.htmlskills .html h4{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.htmlskills .html .bar{
+    padding: 2px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.htmlskills .html .bar .progress{
+    padding: 4px;
+    background: #00abf0;
+    border-radius: 5px;
+}
+
+/*==========>Skills-allset desing<=======*/
+
+.skills-allset {
+    width: 350px;
+    padding: 10px;
+    width: 350px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-allset::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transition: 0.5s ;
+}
+
+.skills-allset:hover:before{
+    width: 100%;
+}
+
+
+.skills-allset .html{
+    margin-top: 20px;
+}
+
+
+.skills-allset .html:nth-child(1) .bar .progress {
+    width: 0%;
+}
+
+.skills-allset .html:nth-child(2) .bar .progress {
+    width: 10%;
+}
+
+.skills-allset .html:nth-child(3) .bar .progress {
+    width: 10%;
+}
+
+.skills-allset .html:nth-child(4) .bar .progress {
+    width: 10%;
+}
+
+.skills-allset .html h4 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.skills-allset .html .bar{
+    padding: 2px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.skills-allset .html .bar .progress{
+    padding: 4px;
+    background: #00abf0;
+    border-radius: 5px;
+}
+
+
+/*======================> Desing A Contact Section <===============================================*/
+
+.contact{
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/*====> inputMain <=========*/
+
+.inputmain .input-box1{
+ display: flex;
+ gap: 20px;
+ position: relative;
+}
+
+.inputmain{
+    margin-top: 30px;
+}
+
+.input-container h2 {
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.input-container span {
+    color: var(--main-color);
+}
+
+.inputmain .input-box1:nth-child(2){
+    margin-top: 30px;
+    position: relative;
+}
+
+.input-box1 .input input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    width: 300px;
+}
+
+.input-box1 .input{
+    position: relative;
+    width: 100%;
+}
+
+.input-box1 .input .efect,
+.textare  .efect{
+    position:absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background: var(--second-bg-color);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.contact form .inputmain .input-box1 .input input:hover~.efect,
+.contact form .inputmain .textare textarea:hover~.efect{
+    width: 100%;
+}
+
+
+
+.input-box1 .input input::placeholder{
+    color: var(--text-color);
+}
+
+
+
+.textare{
+    margin-top: 20px;
+    height: auto;
+    width: 620px ;
+    position: relative;
+    overflow: hidden;
+}
+
+.textare textarea{
+    border-radius: 5px;
+    background: none;
+    border: 2px solid var(--main-color);
+    width: 100%;
+    color: var(--text-color);
+}
+
+.textare  textarea::placeholder{
+    color: var(--text-color);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.buttonx{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  
+}
+
+
+.mainbutton{
+    position: relative;
+}
+
+.buttonx .mainbutton .btn{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    background: var(--main-color);
+    width: 150px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+.buttonx .mainbutton .btn::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: var(--bg-color);
+    transition: 0.5s;
+    color: var(--text-color);
+}
+
+.buttonx .mainbutton .btn:hover:before{
+    width: 100%;
+}
+
+.buttonx .mainbutton .btn:hover{
+    color: var(--text-color);
+}
+
+
+/*======================> Design A Footer <=========================================================*/
+
+.footer{
+    width: 100%;
+    height: 80px;
+    background: var(--second-bg-color);
+    padding:30px 40px;
+}
+
+.footer .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .footer-content .span{
+    position: relative;
+}
+
+.footer .footer-content .icon{
+    width: 40px;
+    height: 40px;
+    background: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid var(--text-color);
+}
+
+.footer .footer-content .icon::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--second-bg-color);
+    z-index: -1;
+    transition: .2s;
+    cursor: pointer;
+}
+
+
+.footer .footer-content .icon:hover:before{
+    width: 100%;
+}
+
+.footer .footer-content .icon i:hover{
+    color: var(--text-color);
+}
+
+.footer .footer-content .icon i{
+    font-size:22px;
+    color: var(--main-color);
+    transition: .5s;
+}
+
+
+/*====================================> CSS Responsive Design <=============================================*/
+
+@media (max-width:768px) {
+    .header #menu-icon {
+        display: block;
+        font-size: 40px;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        cursor: pointer;
+    }
+
+    .header .navbar {
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        background-color: var(--main-color);
+        width: 100%;
+        transition: .5s;
+        z-index: 1;
+        padding-bottom: 20px;
+    }
+
+    .header .navbar.active {
+        left: 0;
+    }
+
+    .header .navbar ul li {
+        display: block;
+    }
+
+
+    .header .navbar ul li a {
+        transform: translateX(-20rem);
+        transition: .25s;
+        transition-delay: 0s;
+    }
+
+    .header .navbar.active ul li a {
+        transform: translateX(0rem);
+    }
+
+    .header .navbar .nav-active {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .header .navbar.active .nav-active {
+        left: 0;
+    }
+
+
+}
+
+
+@media (max-width:765px) {
+    .education-conten {
+        display: block;
+    }
+
+    .skills-container {
+        display: block;
+    }
+
+    .code-skills h2 {
+        text-align: center;
+    }
+
+    .professional-skills h2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .inputmain .input-box1 {
+        display: block;
+    }
+
+    .input-box1 .input input {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .textare {
+        width: 500px;
+    }
+
+}
+
+@media (max-width:541px) {
+    .textare {
+        width: 400px;
+    }
+
+    .home-conten {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-conten .top-text {
+        text-align: center;
+    }
+
+    .home-conten .top-text h2 {
+        font-size: 40px;
+    }
+
+    .home-conten {
+        margin-left: 20px;
+    }
+
+    .home-conten .low-text {
+        text-align: center;
+    }
+
+    .home-conten .p-text {
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width:435px) {
+    .textare {
+        width: 300px;
+    }
+
+
+    .htmlskills {
+        width: 300px;
+    }
+
+    .skills-allset {
+        width: 300px;
+    }
+
+    .footer {
+        height: 150px;
+    }
+
+    .footer .footer-content {
+        display: block;
+    }
+
+    .footer .footer-content .span {
+        text-align: center;
+    }
+
+    .footer .footer-content .icon {
+        margin: auto;
+    }
+
+}
+
+
+
+/* ============================================> Css Animation Design <=====================================*/
+
+@keyframes homeBgtext {
+
+    0%,
+    10%,
+    100% {
+
+        background-position: -42rem;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homecursortext {
+
+    0%,
+    10%,
+    100% {
+
+        width: 0%;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 30%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes aboutspenner {
+    100% {
+        transform: translate(-55%, -60%) rotate(360deg);
+    }
+}
+
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate,
+.showanimate.active .animate {
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.animate.scroll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+
+.skllis.showanimate.active .animate.scroll {
+    animation: showani 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+
+@keyframes sowani {
+    100% {
+        width: 0;
+    }
+}
+
+
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+
+section:nth-child(odd) .animate.scroll {
+    background-color: var(--second-bg-color);
+}
+
+
+/* over all coding stup */
